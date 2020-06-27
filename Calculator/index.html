@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<link rel='stylesheet' href='css/bootstrap.min.css'/>
+<link rel='stylesheet' href='css/app.css'/>
+</head>
+<body>
+<form action="" name="calc">
+<main role="main">
+<div class="container">
+<div class="calcOuter">
+<div class="col-md-12 calcDspl">
+<input type="text" name="screen" class="form-control mt20" readonly/>
+</div>
+<br>
+<div class="container row mx-auto">
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-danger" onclick="document.calc.screen.value =''; return false;">C</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-secondary" onclick="document.calc.screen.value +='/'; return false;">/</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-secondary" onclick="document.calc.screen.value +='*'; return false;">*</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-secondary" onclick="document.calc.screen.value +='-'; return false;">-</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-secondary" onclick="document.calc.screen.value +='+'; return false;">+</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='7'; return false;">7</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='8'; return false;">8</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='9'; return false;">9</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='4'; return false;">4</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='5'; return false;">5</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='6'; return false;">6</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='3'; return false;">3</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='2'; return false;">2</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='1'; return false;">1</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='0'; return false;">0</button>
+<button class="button btn-lg form-control col-md-3 col-sm-3 col-xs-3 bg-info" onclick="document.calc.screen.value +='.'; return false;">.</button>
+<button class="button btn-lg form-control col-md-12 bg-success" onclick="document.calc.screen.value = eval(calc.screen.value); return false;">=</button>
+</div>
+</div>
+</div>
+</main>
+</form>
+</body>
+<script type='text/javascript' src="js/bootstrap.min.js"></script>
+<script type='text/javascript' src="js/app.js"></script>
+</html>

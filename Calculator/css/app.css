@@ -1,0 +1,31 @@
+*{
+border-radius:25px;
+color:#fff !important;
+max-width:500px;
+margin-right:auto;
+margin-left:auto;
+}
+
+.calcOuter{
+background:#e9e9e9;
+height:auto;
+min-height:400px;
+margin-top:50px;
+margin-bottom:50px;
+}
+
+.calcDspl{
+padding-top:15px;
+}
+
+.calcDspl>input[type="text"]{
+height:125px;
+background:#404040 !important;
+border:none;
+resize:none;
+font-size:75px;
+overflow:hidden;
+padding:25px;
+line-height:65px;
+direction:rtl;
+}
