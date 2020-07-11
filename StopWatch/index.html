@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stop Watch</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+border-radius:25%;
+font-family:sans-serif;
+}
+body{
+background:#55acee;
+}
+.jar{
+height:auto;
+min-height:400px;
+width:400px;
+margin:calc(100% - 85%) auto;
+}
+.screenArea{
+height:auto;
+min-height:250px;
+background:rgba(0,0,0,0.8);
+}
+.buttonsArea{
+height:auto;
+min-height:150px;
+}
+.btn{
+height:50px;
+width:calc(340px / 3);
+border:none;
+margin:50px 8.5px;
+color:#fff;
+letter-spacing:5px;
+text-align:center;
+font-weight:bold;
+display:inline-block;
+border-radius:50px;
+}
+.btn1{
+background:green;
+}
+.btn2{
+background:red;
+}
+.btn3{
+background:grey;
+}
+.screen{
+margin:50px 8.5px;
+border-radius:50px;
+}
+.screen1{
+height:150px;
+width:calc(340px / 3);
+background:rgba(255,255,255,0.8);
+display:inline-block;
+}
+.screen2{
+height:150px;
+width:calc(340px / 3);
+background:rgba(255,255,255,0.8);
+display:inline-block;
+}
+.screen3{
+height:150px;
+width:calc(340px / 3);
+background:rgba(255,255,255,0.8);
+display:inline-block;
+}
+.screen>span{
+font-size:40px;
+line-height:150px;
+text-align:center;
+padding:0px 25px;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="jar">
+
+<div class="screenArea">
+<div class="screen screen1"><span id="min">0</span></div>
+<div class="screen screen2"><span id="sec">0</span></div>
+<div class="screen screen3"><span id="msec">0</span></div>
+</div>
+
+<div class="buttonsArea">
+<button class="btn btn1" id="startb" onclick="start()">START</button>
+<button class="btn btn2" onclick="stop()">STOP</button>
+<button class="btn btn3" onclick="reset()">RESET</button>
+</div>
+
+</div>
+
+
+</body>
+<script>
+var min = 0 ;
+var sec = 0;
+var msec = 0;
+
+var minHeading = document.getElementById("min");
+var SecHeading = document.getElementById("sec");
+var MiliSecHeading = document.getElementById("msec");
+var startbutton = document.getElementById("startb")
+var interval;
+
+function timer(){
+msec++
+MiliSecHeading.innerHTML = msec;
+if( msec >= 100){
+sec++
+SecHeading.innerHTML = sec;
+msec = 0;
+
+}else if ( sec >= 60){
+min++
+minHeading.innerHTML = min;
+sec = 0;
+}
+}
+function start(){
+interval = setInterval(timer,10);
+startbutton.disabled = true;
+}
+
+function stop(){
+clearInterval(interval);
+startbutton.disabled = false;
+}
+
+function reset(){
+clearInterval(interval);
+min = 0;
+sec = 0;
+msec = 0;
+minHeading.innerHTML = min;
+SecHeading.innerHTML = sec;
+MiliSecHeading.innerHTML = msec;
+startbutton.disabled = false;    
+
+
+}
+</script>
+</html>
